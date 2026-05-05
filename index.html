@@ -1,31 +1,38 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>pokedex</title>
+    <title>Pokédex</title>
     <link rel="stylesheet" href="style.css">
-    <script src="script.js"></script>
+    <script src="script.js" defer></script>
     
 </head>
 <body>
     
     <div class="container">
             <h2>Busca de Pokémon</h2>
-            <input type="text" id="campoBuscar"
-            placeholder="Digite o nome do Pokémon...">
+
+          <!--Campo de busca e botão-->
+            <input type="text" id="campoBusca" placeholder="Digite o nome do Pokémon...">
             <button id="btnBuscar">Pesquisar</button>
+
+            <!-- Card com as informações do Pokémon (começa escondido)-->
             <div id="resultado" class="escondido">
-             <img id="PokeImg" src="" alt="imagem do pokemon">   
+             <img id="pokeImg" src="" alt="imagem do Pokémon">   
              <h3 id="pokeNome"></h3>
              <p><strong>ID:</strong> <span id="pokeID"></span></p>
-               <p><strong>Altura:</strong> <span id="pokeID"></span></p>
-                 <p><strong>Peso:</strong> <span id="pokeID"></span></p>
-                   <p><strong>Tipo:</strong> <span id="pokeID"></span></p>
+               <p><strong>Altura:</strong> <span id="pokeAltura"></span></p>
+                 <p><strong>Peso:</strong> <span id="pokePeso"></span></p>
+                   <p><strong>Tipo:</strong> <span id="pokeTipo"></span></p>
             </div>
-            <div id="msgErro" class="escondido"></div>
-            Pokemon não encontrado, tente novamente!
+
+            <!--Mensagem de erro (começa escondida)-->
+            <div id="msgErro" class="escondido">
+               Pokémon não encontrado, tente novamente!
+            </div>
+           
         </div>
 
 </body>
-</html>
+</html> 

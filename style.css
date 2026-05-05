@@ -1,24 +1,20 @@
-* 
-{
-    margin: 0;
-    padding: 0;
-   
-}
-
+/*Estilo geral da página*/
 body {
     font-family: Arial, sans-serif;
-    background-color : #ffffff;
+    background-color : #fef2f5;
     display: flex;
     justify-content: center;
     padding: 40px 20px;
 }
 
+/*Caixa central*/
 .container {
-    background-color:rgb(255, 255, 255) ;
-   padding: 100px;
-   width: 30%;
+   background-color: white;
+   border-radius: 12px;
+   padding: 30px;
+   width: 100%;
    text-align: center;
-   box-shadow: 0 4px 12px rgba(0, 0, 0, 1);
+   box-shadow: 0 4px 12px rgba(0, 0, 0, 0,1);
 }
 
 input{
@@ -56,6 +52,7 @@ img{
     padding: 10px;
     margin-top: 16px;
     color: #856404;
+    display: none;
 }
 
 .escondido{
