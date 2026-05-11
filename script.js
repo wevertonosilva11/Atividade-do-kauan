@@ -1,21 +1,21 @@
 // Pega os elementos da páginas pelo ID
  const campoBusca = document.getElementById('campoBusca');
  const btnBuscar = document.getElementById('btnBuscar');
- const resultado = document.getElementById('resultado')
+ const resultado = document.getElementById('resultado');
  const msgErro = document.getElementById('msgErro');
 
  // Função principal: busca o pokemon do APi
  async function buscarPokemon () {
-    const nome = campoBusca.ariaValueMax.toLowerCase().trim();}
+    const nome = campoBusca.Value.toLowerCase().trim();
     
-    if (nome === ''){
-        alert('Digite o nome de um Pokemon');
+    if (nome === ""){
+        alert("Digite o nome de um Pokemon");
         return;
     }
 
     try {
         // faz a requisição para o pokeAPI
-        const resposta = await fetch('https://pokeapi.co/api/v2/pokemon/${nome}');
+        const resposta = await fetch(`https://pokeapi.co/api/v2/pokemon/${nome}`);
         
         // se o pokemon não existe, lança o erro
         if(!resposta.ok) throw new Error('Não encontrado');
@@ -39,12 +39,14 @@
      resultado.classList.add('escondido');
      msgErro.classList.remove('escondido')
     }
+   }
 
 
     //Dispara a busca ao clicar no botão
     btnBuscar.addEventListener('click', buscarPokemon);
 
     //Dispara a busca ao pressionar Enter no campo
-    campoBusca.addEventListener('keypress', (e) => {
+    campoBusca.addEventListener ('keypress', (e) => {
         if (e.key === 'Enter') buscarPokemon();
     });
+ 
